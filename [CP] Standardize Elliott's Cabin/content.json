@@ -1,0 +1,141 @@
+{
+	"Format": "1.10",
+	"ConfigSchema": {
+		/*This only applies to the Immersive Maps version. No change will be made to the vanilla version.*/
+		"ImmersiveMapsBorder": {
+			"AllowValues": "Vanilla, KarmMatch",
+			"Default": "Vanilla"
+		}
+	},
+	"Changes": [
+			/*The following things are applicable here:
+			Vanilla
+			ATDSV
+			Karmylla's Immersive Maps + Vanilla
+			Karmylla's Immersive Maps + ADTSV*/
+		{
+			"Action": "EditImage",
+			"Target": "ElliottHouseTiles, Maps/ElliottHouseTiles",
+			"FromFile": "assets/vanilla.png",
+			"When": {
+				"HasMod:minervamaga.CP.ATDSV": false,
+				"HasMod:Karmylla.ImmersiveMaps": false,
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "ElliottHouseTiles, Maps/ElliottHouseTiles",
+			"FromFile": "assets/atdsv.png",
+			"When": {
+				"HasMod:minervamaga.CP.ATDSV": true,
+				"HasMod:Karmylla.ImmersiveMaps": false,
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "ElliottHouseTiles, Maps/ElliottHouseTiles",
+			"FromFile": "assets/karm-vanilla-vanillaborder.png",
+			"When": {
+				"HasMod:minervamaga.CP.ATDSV": false,
+				"HasMod:Karmylla.ImmersiveMaps": true,
+				"ImmersiveMapsBorder": "Vanilla"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "ElliottHouseTiles, Maps/ElliottHouseTiles",
+			"FromFile": "assets/karm-vanilla-karmborder.png",
+			"When": {
+				"HasMod:minervamaga.CP.ATDSV": false,
+				"HasMod:Karmylla.ImmersiveMaps": true,
+				"ImmersiveMapsBorder": "KarmMatch"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "ElliottHouseTiles, Maps/ElliottHouseTiles",
+			"FromFile": "assets/karm-vanilla-vanillaborder.png",
+			"When": {
+				"HasMod:minervamaga.CP.ATDSV": false,
+				"HasMod:Karmylla.ImmersiveMaps": true,
+				"ImmersiveMapsBorder": "Vanilla"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "ElliottHouseTiles, Maps/ElliottHouseTiles",
+			"FromFile": "assets/karm-vanilla-karmborder.png",
+			"When": {
+				"HasMod:minervamaga.CP.ATDSV": false,
+				"HasMod:Karmylla.ImmersiveMaps": true,
+				"ImmersiveMapsBorder": "KarmMatch"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "ElliottHouseTiles, Maps/ElliottHouseTiles",
+			"FromFile": "assets/karm-atdsv-vanillaborder.png",
+			"When": {
+				"HasMod:minervamaga.CP.ATDSV": true,
+				"HasMod:Karmylla.ImmersiveMaps": true,
+				"ImmersiveMapsBorder": "Vanilla"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "ElliottHouseTiles, Maps/ElliottHouseTiles",
+			"FromFile": "assets/karm-atdsv-karmborder.png",
+			"When": {
+				"HasMod:minervamaga.CP.ATDSV": true,
+				"HasMod:Karmylla.ImmersiveMaps": true,
+				"ImmersiveMapsBorder": "KarmMatch"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Strings/StringsFromMaps",
+			"When": {
+				"HasMod:Karmylla.ImmersiveMaps": false,
+				"HasMod:minervamaga.CP.ATDSV": false,
+			},
+			"Entries": {
+				"ElliottHouse.2": "It's Elliott's work desk. There is a just-blooming rose on one side, and a typewriter with notes underneath it on the other.",
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Strings/StringsFromMaps",
+			"When": {
+				"HasMod:Karmylla.ImmersiveMaps": false,
+				"HasMod:minervamaga.CP.ATDSV": true,
+			},
+			"Entries": {
+				"ElliottHouse.2": "It's Elliot's work desk. There is a just-blooming rose on one side, and and a typewriter with notes underneath it on the other",
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Strings/StringsFromMaps",
+			"When": {
+				"HasMod:Karmylla.ImmersiveMaps": true,
+				"HasMod:minervamaga.CP.ATDSV": false,
+			},
+			"Entries": {
+				"ElliottHouse.2": "It's Elliott's work desk. There is a just-blooming rose on one side, and an open journal on the other.",
+				"ElliottHouse.4": "It's a cactus imported from Calico Desert! It's got a tiny bloom on it.",
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Strings/StringsFromMaps",
+			"When": {
+				"HasMod:Karmylla.ImmersiveMaps": true,
+				"HasMod:minervamaga.CP.ATDSV": true,
+			},
+			"Entries": {
+				"ElliottHouse.2": "It's Elliot's work desk. There is a just-blooming rose on one side, and an open journal on the other.",
+				"ElliottHouse.4": "It's a small, hardy plant imported from Calico Desert!",
+			}
+		},
+	]
+}

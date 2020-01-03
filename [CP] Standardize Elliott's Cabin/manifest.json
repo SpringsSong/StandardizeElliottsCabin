@@ -1,0 +1,13 @@
+{
+  "Name": "Standardize Elliott's Cabin",
+  "Author": "SpringsSong",
+  "Version": "2.0.0",
+  "Description": "Replaces Elliott's cabin tiles with tiles more in line with the rest of the town.",
+  "UniqueID": "SpringsSong.ElliottCabinRevamp",
+  "MinimumApiVersion": "3.0.0",
+  "UpdateKeys": ["ModDrop:638636"],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher", // the ID of required mod
+    "MinimumVersion": "1.10.0" // optional
+  }
+}
